@@ -1,92 +1,75 @@
-nav {
-    background-color: #222;
-    padding: 15px;
+/* Контактный раздел */
+.contact {
+    background: #222;
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 10px;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Контейнер для формы */
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Форматирование полей формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+form label {
     font-weight: bold;
+    color: #222;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Кнопка отправки */
+form button {
+    background: #c4a484;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #a37650;
+}
+
+/* Блок с контактной информацией */
+.contact-info {
+    margin-top: 20px;
     font-size: 18px;
 }
 
-nav ul li a:hover {
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
     color: #c4a484;
-}
-/* 📱 Адаптивный дизайн для экранов меньше 768px (телефоны) */
-@media (max-width: 768px) {
-    body {
-        text-align: center;
-        padding: 10px;
-    }
-
-    header {
-        font-size: 32px; /* Уменьшаем заголовок на телефонах */
-        padding: 40px;
-    }
-
-    .portfolio {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .portfolio img {
-        width: 90%; /* Делаем фото шире на телефоне */
-        max-width: 400px;
-    }
-
-    .about, .contact {
-        font-size: 18px;
-        padding: 20px;
-    }
-
-    .contact p {
-        flex-direction: column; /* Размещаем текст контактов вертикально */
-        text-align: center;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Добавляем отступы между пунктами меню */
-    }
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* 📱 Для очень маленьких экранов (меньше 480px) */
-@media (max-width: 480px) {
-    header {
-        font-size: 28px;
-    }
-
-    .portfolio img {
-        width: 100%; /* Фото на всю ширину */
-    }
-}
-/* 🎬 Анимация плавного появления (Fade-in) */
-.fade-in {
-    opacity: 0; /* Сначала элемент невидимый */
-    transform: translateY(20px); /* Чуть ниже начального положения */
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+.contact-info a:hover {
+    text-decoration: underline;
 }
