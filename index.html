@@ -1,16 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="de">
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Über mich</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-    </ul>
-</nav>
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,22 +35,31 @@
             font-weight: bold;
             text-transform: uppercase;
         }
-        .portfolio img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.4s ease-in-out;
+
+        /* Анимация плавного появления */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
         }
-    .portfolio img {
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .portfolio img {
             width: 300px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease-in-out;
-}
-
-.portfolio img:hover {
-    transform: translateY(-10px); /* Поднимает изображение вверх */
+            transition: transform 0.4s ease-in-out;
         }
+
+        .portfolio img:hover {
+            transform: translateY(-10px);
+        }
+
         .about, .contact {
             padding: 80px 20px;
             max-width: 800px;
@@ -69,6 +67,7 @@
             font-size: 20px;
             line-height: 1.6;
         }
+        
         .contact {
             background: #222;
             color: #fff;
@@ -76,10 +75,12 @@
             border-radius: 10px;
             text-align: left;
         }
+        
         .contact h2 {
             text-align: center;
             margin-bottom: 20px;
         }
+        
         .contact p {
             display: flex;
             align-items: center;
@@ -87,25 +88,30 @@
             font-size: 18px;
             margin-bottom: 10px;
         }
+        
         .contact a {
             color: #c4a484;
             text-decoration: none;
             font-weight: bold;
         }
+        
         .contact a:hover {
             text-decoration: underline;
         }
+        
         .icons {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-top: 20px;
         }
+        
         .icons a {
             font-size: 24px;
             color: #fff;
             transition: transform 0.2s ease-in-out;
         }
+        
         .icons a:hover {
             transform: scale(1.2);
             color: #c4a484;
@@ -113,49 +119,65 @@
     </style>
 </head>
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
     <header class="fade-in">
         Alina Fix
     </header>
     
-    <section class="portfolio container"class="fade-in">
+    <section class="portfolio container fade-in">
         <img src="images/nature.JPG" alt="Naturfotografie">
         <img src="images/nature1.JPG" alt="Porträt">
         <img src="images/nature2.JPG" alt="Produktfotografie">
         <img src="images/nature3.JPG" alt="Naturfotografie">
-<img src="images/nature4.JPG" alt="Naturfotografie">
-<img src="images/nature5.JPG" alt="Naturfotografie">
-<img src="images/nature6.JPG" alt="Naturfotografie">
-<img src="images/nature7.JPG" alt="Naturfotografie">
-<img src="images/nature8.JPG" alt="Naturfotografie">
-<img src="images/nature9.JPG" alt="Naturfotografie">
-<img src="images/nature10.JPG" alt="Naturfotografie">
-<img src="images/nature11.JPG" alt="Naturfotografie">
+        <img src="images/nature4.JPG" alt="Naturfotografie">
+        <img src="images/nature5.JPG" alt="Naturfotografie">
+        <img src="images/nature6.JPG" alt="Naturfotografie">
+        <img src="images/nature7.JPG" alt="Naturfotografie">
+        <img src="images/nature8.JPG" alt="Naturfotografie">
+        <img src="images/nature9.JPG" alt="Naturfotografie">
+        <img src="images/nature10.JPG" alt="Naturfotografie">
+        <img src="images/nature11.JPG" alt="Naturfotografie">
     </section>
     
-    <section class="about" class="fade-in">
-     <section class="contact container" class="fade-in">
+    <section class="about fade-in">
+        <h2>Über mich</h2>
+        <p>Fotografie ist für mich mehr als nur ein Beruf – es ist meine Leidenschaft...</p>
+    </section>
+
+    <section class="contact container fade-in">
         <h2>Kontakt</h2>
         <p><i class="fas fa-envelope"></i> <a href="mailto:alina_fix@dmx.de">alina_fix@dmx.de</a></p>
         <p><i class="fab fa-whatsapp"></i> <a href="tel:015110486204">015110486204</a></p>
-        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina?igsh=NjRhMW42d29ucm4z" target="_blank">@yankovayaalina</a></p
+        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina?igsh=NjRhMW42d29ucm4z" target="_blank">@yankovayaalina</a></p>
     </section>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    let elements = document.querySelectorAll(".fade-in");
-    
-    function checkScroll() {
-        elements.forEach((element) => {
-            let position = element.getBoundingClientRect().top;
-            let screenHeight = window.innerHeight;
-            if (position < screenHeight - 50) {
-                element.classList.add("visible");
-            }
-        });
-    }
 
-    window.addEventListener("scroll", checkScroll);
-    checkScroll(); // Проверить сразу при загрузке
-});
-</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let elements = document.querySelectorAll(".fade-in");
+            
+            function checkScroll() {
+                elements.forEach((element) => {
+                    let position = element.getBoundingClientRect().top;
+                    let screenHeight = window.innerHeight;
+                    if (position < screenHeight - 50) {
+                        element.classList.add("visible");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkScroll);
+            checkScroll(); // Проверить сразу при загрузке
+        });
+    </script>
+
 </body>
 </html>
