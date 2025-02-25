@@ -68,6 +68,19 @@ nav ul li a:hover {
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+/* Убираем растянутый фон */
+.about-container {
+    background: none !important;
+}
+
+/* Фото справа в круглой рамке */
+.about-photo {
+    width: 250px; /* Размер фото */
+    height: 250px;
+    border-radius: 50%; /* Делаем фото круглым */
+    object-fit: cover; /* Чтобы фото не искажалось */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем лёгкую тень */
+}
 
 /* Убираем фон с главной страницы */
 header {
