@@ -1,3 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Глобальные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #222;
+    text-align: center;
+}
+
+/* Контейнер для центрирования */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Заголовок */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #222;
+    padding: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #c4a484;
+}
+
+/* Анимация плавного появления */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Портфолио */
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out;
+}
+
+.portfolio img:hover {
+    transform: translateY(-10px);
+}
+
+/* Раздел "Обо мне" */
+.about {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
 /* Контактный раздел */
 .contact {
     background: #222;
@@ -7,17 +109,26 @@
     text-align: center;
 }
 
-/* Контейнер для формы */
+/* Контейнер для формы и контактов */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Контактная форма */
 .contact-form {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
-    margin: 20px auto;
+    width: 100%;
 }
 
-/* Форматирование полей формы */
+/* Поля формы */
 form {
     display: flex;
     flex-direction: column;
@@ -54,14 +165,18 @@ form button:hover {
     background: #a37650;
 }
 
-/* Блок с контактной информацией */
+/* Контактная информация */
 .contact-info {
-    margin-top: 20px;
     font-size: 18px;
+    text-align: left;
+    max-width: 300px;
 }
 
 .contact-info p {
     margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .contact-info a {
@@ -72,4 +187,35 @@ form button:hover {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+/* 📱 Адаптация для телефонов */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .portfolio img {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    header {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 32px;
+    }
+
+    .portfolio img {
+        width: 100%;
+    }
 }
