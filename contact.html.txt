@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Alina Fix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Контактная информация -->
+    <section class="contact container fade-in">
+        <h2>Kontakt</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:alina_fix@dmx.de">alina_fix@dmx.de</a></p>
+            <p><i class="fab fa-whatsapp"></i> <a href="tel:015110486204">015110486204</a></p>
+            <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina" target="_blank">@yankovayaalina</a></p>
+        </div>
+    </section>
+
+</body>
+</html>
