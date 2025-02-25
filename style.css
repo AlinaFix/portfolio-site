@@ -104,6 +104,22 @@ header p {
     line-height: 1.8;
     padding: 20px;
 }
+/* Секция "Обо мне" */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Размещаем текст по центру */
+    max-width: 700px; /* Ограничиваем ширину для лучшей читаемости */
+    margin: 60px auto; /* Центрируем */
+    text-align: left; /* Выравниваем текст влево */
+}
+
+/* Заголовок */
+.about-container h2 {
+    font-size: 36px;
+    font-family: 'Playfair Display', serif
+
 
 /* Контактный блок */
 .contact {
