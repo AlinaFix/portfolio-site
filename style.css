@@ -1,22 +1,99 @@
-/* Контактная секция */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Глобальные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #222;
+    text-align: center;
+}
+
+/* Навигация */
+nav {
+    background: #222;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #c4a484;
+}
+
+/* Заголовок */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #f8f8f8;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Портфолио */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: translateY(-10px);
+}
+
+/* Контакты */
 .contact {
     background: #222;
     color: #fff;
     padding: 60px 20px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
+    max-width: 400px;
+    margin: 40px auto;
 }
 
-/* Контейнер с контактами */
+/* Контактная информация */
 .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Выровнять влево */
-    max-width: 300px;
-    margin: auto; /* Центрирование блока */
+    align-items: flex-start;
 }
 
-/* Отдельные строки контактов */
 .contact-info p {
     display: flex;
     align-items: center;
@@ -25,13 +102,25 @@
     margin-bottom: 10px;
 }
 
-/* Цвет ссылок теперь не синий */
+/* Исправление цвета ссылок */
 .contact-info a {
-    color: #c4a484; /* Бежевый цвет (можно изменить) */
+    color: #c4a484;
     text-decoration: none;
     font-weight: bold;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+/* 📱 Адаптация для телефонов */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    header {
+        font-size: 28px;
+    }
 }
