@@ -96,6 +96,24 @@ nav ul li a:hover {
 body {
     background: url("images/photo.jpg") no-repeat center center;
     background-size: contain; /* Вместо cover - изображение будет в своих пропорциях */
+.portfolio {
+    margin-top: 50px; /* Отодвигаем секцию ниже */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio img:hover {
+    transform: translateY(-10px);
+}
 
 }
 header img {
