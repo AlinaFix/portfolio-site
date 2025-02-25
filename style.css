@@ -42,78 +42,41 @@ nav ul li a:hover {
     color: #c4a484;
 }
 
-/* Блок "Über mich" с текстом слева и фото справа */
+/* Раздел "Обо мне" */
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     max-width: 1000px;
-    margin: 40px auto;
-    gap: 40px;
-}
-
-/* Текст слева */
-.about-text {
-    flex: 1;
-    text-align: left;
+    margin: 60px auto;
+    text-align: left; /* Выравнивание текста */
     font-size: 18px;
     line-height: 1.8;
+    padding: 20px;
 }
 
-/* Фото справа в круглой рамке */
-.about-photo {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-/* Убираем растянутый фон */
-.about-container {
-    background: none !important;
-}
-
-/* Фото справа в круглой рамке */
-.about-photo {
-    width: 250px; /* Размер фото */
-    height: 250px;
-    border-radius: 50%; /* Делаем фото круглым */
-    object-fit: cover; /* Чтобы фото не искажалось */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем лёгкую тень */
-}
-
-/* Убираем фон с главной страницы */
-header {
-    background: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
+/* Заголовки */
+h1, h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
 }
-/* Выравнивание заголовка Portfolio */
+
+/* Портфолио */
 .portfolio {
     text-align: center;
     margin: 50px auto;
-    max-width: 1200px; /* Делаем так, чтобы контент не был слишком широким */
+    max-width: 1200px;
 }
 
-/* Галерея фотографий */
+/* Галерея изображений */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Центрируем */
+    justify-content: center;
     gap: 20px;
 }
 
-/* Фото в портфолио */
 .gallery img {
     width: 300px;
-    height: 400px; /* Добавляем высоту для равномерности */
+    height: 400px;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -124,16 +87,16 @@ header {
     transform: translateY(-10px);
 }
 
-/* Блок "Контакты" */
+/* Контактный блок */
 .contact {
     background: #222;
     color: #fff;
     padding: 40px;
     border-radius: 20px;
     text-align: center;
-    max-width: 1000px; /* Делаем его по ширине, как галерея */
+    max-width: 1000px;
     width: 90%;
-    margin: 50px auto; /* Центрируем */
+    margin: 50px auto;
 }
 
 /* Контактная информация */
@@ -151,7 +114,7 @@ header {
     margin-bottom: 10px;
 }
 
-/* Выравнивание ссылок */
+/* Ссылки */
 .contact-info a {
     color: #c4a484;
     text-decoration: none;
@@ -162,7 +125,7 @@ header {
     text-decoration: underline;
 }
 
-/* 📱 Адаптация для мобильных */
+/* Адаптация для мобильных */
 @media (max-width: 768px) {
     .gallery img {
         width: 90%;
@@ -173,90 +136,8 @@ header {
     .contact {
         width: 90%;
     }
-}
 
-
-/* Портфолио */
-.portfolio {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.portfolio img {
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio img:hover {
-    transform: translateY(-10px);
-}
-
-/* Контакты */
-.contact {
-    background: #222;
-    color: #fff;
-    padding: 60px 20px;
-    border-radius: 10px;
-    text-align: left;
-    max-width: 900px;
-    width: 100%;
-    margin: 40px auto;
-    padding: 40px;
-}
-
-/* Контактная информация */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.contact-info p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* Исправление цвета ссылок */
-.contact-info a {
-    color: #c4a484;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-/* 📱 Адаптация для телефонов */
-@media (max-width: 768px) {
     .about-container {
-        flex-direction: column;
         text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .about-photo {
-        width: 200px;
-        height: 200px;
-    }
-
-    .gallery img {
-        width: 90%;
-        max-width: 400px;
-    }
-
-    header {
-        font-size: 28px;
     }
 }
