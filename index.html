@@ -67,53 +67,46 @@
             font-size: 20px;
             line-height: 1.6;
         }
-        
+
+        /* Контактный раздел */
         .contact {
             background: #222;
             color: #fff;
             padding: 60px 20px;
             border-radius: 10px;
-            text-align: left;
-        }
-        
-        .contact h2 {
             text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .contact p {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        
-        .contact a {
-            color: #c4a484;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .contact a:hover {
-            text-decoration: underline;
         }
 
-        /* Стили для контактной формы */
+        /* Контейнер для формы и контактов */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        /* Контактная форма */
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Поля формы */
         form {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            margin: 20px auto;
         }
 
         form label {
             font-weight: bold;
+            color: #222;
+            text-align: left;
         }
 
         form input, form textarea {
@@ -124,6 +117,7 @@
             font-size: 16px;
         }
 
+        /* Кнопка отправки */
         form button {
             background: #c4a484;
             color: white;
@@ -138,7 +132,42 @@
         form button:hover {
             background: #a37650;
         }
-        
+
+        /* Контактная информация */
+        .contact-info {
+            font-size: 18px;
+            text-align: left;
+            max-width: 300px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info a {
+            color: #c4a484;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* 📱 Адаптация для телефонов */
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-info {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -176,68 +205,32 @@
         <p>Fotografie ist für mich mehr als nur ein Beruf – es ist meine Leidenschaft...</p>
     </section>
 
-   <section class="contact container fade-in">
-    <h2>Kontakt</h2>
+    <section class="contact container fade-in">
+        <h2>Kontakt</h2>
 
-    <div class="contact-form">
-        <form action="https://formspree.io/f/xdkarybk" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xdkarybk" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
 
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="message">Nachricht</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Senden</button>
-        </form>
-    </div>
+                    <button type="submit">Senden</button>
+                </form>
+            </div>
 
-    <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> <a href="mailto:alina_fix@dmx.de">alina_fix@dmx.de</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="tel:015110486204">015110486204</a></p>
-        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina" target="_blank">@yankovayaalina</a></p>
-    </div>
-</section>
-
-
-        <form action="https://formspree.io/f/xdkarybk" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Nachricht</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Senden</button>
-        </form>
-
-        <p><i class="fas fa-envelope"></i> <a href="mailto:alina_fix@dmx.de">alina_fix@dmx.de</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="tel:015110486204">015110486204</a></p>
-        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina" target="_blank">@yankovayaalina</a></p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:alina_fix@dmx.de">alina_fix@dmx.de</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="tel:015110486204">015110486204</a></p>
+                <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina" target="_blank">@yankovayaalina</a></p>
+            </div>
+        </div>
     </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let elements = document.querySelectorAll(".fade-in");
-            
-            function checkScroll() {
-                elements.forEach((element) => {
-                    let position = element.getBoundingClientRect().top;
-                    let screenHeight = window.innerHeight;
-                    if (position < screenHeight - 50) {
-                        element.classList.add("visible");
-                    }
-                });
-            }
-
-            window.addEventListener("scroll", checkScroll);
-            checkScroll(); // Проверить сразу при загрузке
-        });
-    </script>
 
 </body>
 </html>
