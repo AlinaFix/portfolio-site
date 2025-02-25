@@ -176,8 +176,31 @@
         <p>Fotografie ist für mich mehr als nur ein Beruf – es ist meine Leidenschaft...</p>
     </section>
 
-    <section class="contact container fade-in">
-        <h2>Kontakt</h2>
+   <section class="contact container fade-in">
+    <h2>Kontakt</h2>
+
+    <div class="contact-form">
+        <form action="https://formspree.io/f/xdkarybk" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:alina_fix@dmx.de">alina_fix@dmx.de</a></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="tel:015110486204">015110486204</a></p>
+        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina" target="_blank">@yankovayaalina</a></p>
+    </div>
+</section>
+
 
         <form action="https://formspree.io/f/xdkarybk" method="POST">
             <label for="name">Name</label>
