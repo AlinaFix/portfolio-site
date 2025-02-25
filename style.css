@@ -24,12 +24,13 @@ body {
 /* Заголовок */
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
     background-color: #f8f8f8;
     font-family: 'Playfair Display', serif;
-    font-size: 64px;
+    font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -59,27 +60,15 @@ nav ul li a:hover {
     color: #c4a484;
 }
 
-/* Анимация */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Портфолио */
-.portfolio {
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.portfolio img {
+.gallery img {
     width: 300px;
     height: auto;
     border-radius: 10px;
@@ -87,17 +76,8 @@ nav ul li a:hover {
     transition: transform 0.4s ease-in-out;
 }
 
-.portfolio img:hover {
+.gallery img:hover {
     transform: translateY(-10px);
-}
-
-/* Раздел "Обо мне" */
-.about {
-    padding: 80px 20px;
-    max-width: 800px;
-    margin: auto;
-    font-size: 20px;
-    line-height: 1.6;
 }
 
 /* Контакты */
@@ -164,12 +144,12 @@ form button:hover {
         align-items: center;
     }
 
-    .portfolio img {
+    .gallery img {
         width: 90%;
         max-width: 400px;
     }
 
     header {
-        font-size: 42px;
+        font-size: 28px;
     }
 }
