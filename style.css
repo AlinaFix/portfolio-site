@@ -93,10 +93,10 @@ nav ul li a:hover {
     object-fit: cover; /* Чтобы фото не искажалось */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем лёгкую тень */
 }
-header {
-    background-size: contain;  /* Вместо cover */
-    background-repeat: no-repeat;
-    background-position: center;
+body {
+    background: url("images/photo.jpg") no-repeat center center;
+    background-size: contain; /* Вместо cover - изображение будет в своих пропорциях */
+
 }
 header img {
     max-width: 100%;
