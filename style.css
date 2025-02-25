@@ -41,63 +41,50 @@ nav ul li a {
 nav ul li a:hover {
     color: #c4a484;
 }
-/* Блок "Über mich" с текстом слева и фото справа */
+
+/* Блок "Über mich" */
 .about-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1000px; /* Ограничиваем ширину */
+    max-width: 1000px;
     margin: 40px auto;
-    gap: 40px; /* Отступ между текстом и фото */
+    gap: 40px;
 }
 
-/* Текст слева */
 .about-text {
     flex: 1;
-    text-align: left; /* Выравниваем текст слева */
+    text-align: left;
     font-size: 18px;
     line-height: 1.8;
 }
 
-/* Фото справа в круглой рамке */
 .about-photo {
-    width: 250px; /* Размер фото */
+    width: 250px;
     height: 250px;
-    border-radius: 50%; /* Делаем фото круглым */
-    object-fit: cover; /* Фото вписывается без искажений */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем лёгкую тень */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-/* Контейнер для текста и фото */
-.about-container {
+
+/* Фон заголовка */
+header {
     display: flex;
-    align-items: center; /* Выравниваем по центру */
+    flex-direction: column;
     justify-content: center;
-    max-width: 1000px; /* Ограничиваем ширину */
-    margin: 40px auto;
-    gap: 40px; /* Отступ между текстом и фото */
-}
-
-/* Текст слева */
-.about-text {
-    flex: 1;
-    text-align: left; /* Выравниваем текст слева */
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* Фото справа в круглой рамке */
-.about-photo {
-    width: 250px; /* Размер фото */
-    height: 250px;
-    border-radius: 50%; /* Делаем фото круглым */
-    object-fit: cover; /* Чтобы фото не искажалось */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем лёгкую тень */
-}
-body {
+    align-items: center;
+    height: 50vh;
     background: url("images/photo.jpg") no-repeat center center;
-    background-size: contain; /* Вместо cover - изображение будет в своих пропорциях */
+    background-size: cover;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Портфолио */
 .portfolio {
-    margin-top: 50px; /* Отодвигаем секцию ниже */
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -115,85 +102,6 @@ body {
     transform: translateY(-10px);
 }
 
-}
-header img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-
-
-/* 📱 Адаптация для телефонов */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Ставим фото под текст на телефонах */
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .about-photo {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-
-/* 📱 Адаптация для мобильных */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Ставим фото под текст на телефонах */
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .about-photo {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-
-/* Заголовок */
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    background-color: #f8f8f8;
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Портфолио */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.gallery img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease-in-out;
-}
-
-.gallery img:hover {
-    transform: translateY(-10px);
-}
-
 /* Контакты */
 .contact {
     background: #222;
@@ -201,13 +109,12 @@ header {
     padding: 60px 20px;
     border-radius: 10px;
     text-align: left;
-    max-width: 900px; /* Растягиваем ширину */
-    width: 100%; /* Делаем блок адаптивным */
+    max-width: 900px;
+    width: 100%;
     margin: 40px auto;
-    padding: 40px; /* Делаем блок выше */
+    padding: 40px;
 }
 
-/* Контактная информация */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -222,7 +129,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* Исправление цвета ссылок */
 .contact-info a {
     color: #c4a484;
     text-decoration: none;
@@ -233,8 +139,22 @@ header {
     text-decoration: underline;
 }
 
-/* 📱 Адаптация для телефонов */
+/* Адаптация для телефонов */
 @media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 200px;
+        height: 200px;
+    }
+
     .gallery img {
         width: 90%;
         max-width: 400px;
