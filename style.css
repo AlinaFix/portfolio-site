@@ -95,6 +95,86 @@ header {
     font-weight: bold;
     text-transform: uppercase;
 }
+/* Выравнивание заголовка Portfolio */
+.portfolio {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 1200px; /* Делаем так, чтобы контент не был слишком широким */
+}
+
+/* Галерея фотографий */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем */
+    gap: 20px;
+}
+
+/* Фото в портфолио */
+.gallery img {
+    width: 300px;
+    height: 400px; /* Добавляем высоту для равномерности */
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: translateY(-10px);
+}
+
+/* Блок "Контакты" */
+.contact {
+    background: #222;
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 1000px; /* Делаем его по ширине, как галерея */
+    width: 90%;
+    margin: 50px auto; /* Центрируем */
+}
+
+/* Контактная информация */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Выравнивание ссылок */
+.contact-info a {
+    color: #c4a484;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* 📱 Адаптация для мобильных */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .contact {
+        width: 90%;
+    }
+}
+
 
 /* Портфолио */
 .portfolio {
