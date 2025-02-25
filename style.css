@@ -12,6 +12,7 @@ body {
     background-color: #f8f8f8;
     color: #222;
     text-align: center;
+    background: none; /* Убираем фоновое изображение */
 }
 
 /* Навигация */
@@ -47,40 +48,43 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1000px; /* Ограничиваем ширину */
+    max-width: 1000px;
     margin: 40px auto;
-    gap: 40px; /* Отступ между текстом и фото */
+    gap: 40px;
 }
 
 /* Текст слева */
 .about-text {
     flex: 1;
-    text-align: left; /* Выравниваем текст слева */
+    text-align: left;
     font-size: 18px;
     line-height: 1.8;
 }
 
 /* Фото справа в круглой рамке */
 .about-photo {
-    width: 250px; /* Размер фото */
+    width: 250px;
     height: 250px;
-    border-radius: 50%; /* Делаем фото круглым */
-    object-fit: cover; /* Фото вписывается без искажений */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем лёгкую тень */
+    border-radius: 50%;
+    object-fit: cover; /* Оставляет пропорции, обрезая лишнее */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Убираем фоновое изображение с главной страницы */
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    background-color: #f8f8f8;
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
+/* 📱 Адаптация для телефонов */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 /* Портфолио */
@@ -110,10 +114,10 @@ header {
     padding: 60px 20px;
     border-radius: 10px;
     text-align: left;
-    max-width: 900px; /* Растягиваем ширину */
-    width: 100%; /* Делаем блок адаптивным */
+    max-width: 900px;
+    width: 100%;
     margin: 40px auto;
-    padding: 40px; /* Делаем блок выше */
+    padding: 40px;
 }
 
 /* Контактная информация */
