@@ -113,11 +113,11 @@
     </style>
 </head>
 <body>
-    <header>
+    <header class="fade-in">
         Alina Fix
     </header>
     
-    <section class="portfolio container">
+    <section class="portfolio container"class="fade-in">
         <img src="images/nature.JPG" alt="Naturfotografie">
         <img src="images/nature1.JPG" alt="Porträt">
         <img src="images/nature2.JPG" alt="Produktfotografie">
@@ -132,13 +132,31 @@
 <img src="images/nature11.JPG" alt="Naturfotografie">
     </section>
     
-    <section class="about">
+    <section class="about" class="fade-in">
     <a href="about.html">Über mich</a>
-     <section class="contact container">
+     <section class="contact container" class="fade-in">
         <h2>Kontakt</h2>
         <p><i class="fas fa-envelope"></i> <a href="mailto:alina_fix@dmx.de">alina_fix@dmx.de</a></p>
         <p><i class="fab fa-whatsapp"></i> <a href="tel:015110486204">015110486204</a></p>
         <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina?igsh=NjRhMW42d29ucm4z" target="_blank">@yankovayaalina</a></p
     </section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let elements = document.querySelectorAll(".fade-in");
+    
+    function checkScroll() {
+        elements.forEach((element) => {
+            let position = element.getBoundingClientRect().top;
+            let screenHeight = window.innerHeight;
+            if (position < screenHeight - 50) {
+                element.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Проверить сразу при загрузке
+});
+</script>
 </body>
 </html>
