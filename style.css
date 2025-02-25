@@ -12,7 +12,6 @@ body {
     background-color: #f8f8f8;
     color: #222;
     text-align: center;
-    background: none; /* Убираем фоновое изображение */
 }
 
 /* Навигация */
@@ -48,7 +47,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 10000px;
+    max-width: 1000px;
     margin: 40px auto;
     gap: 40px;
 }
@@ -66,44 +65,41 @@ nav ul li a:hover {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    object-fit: cover; /* Оставляет пропорции, обрезая лишнее */
+    object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 📱 Адаптация для телефонов */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .about-photo {
-        width: 200px;
-        height: 200px;
-    }
+/* Убираем фон с главной страницы */
+header {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Портфолио */
-.gallery {
+.portfolio {
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.gallery img {
+.portfolio img {
     width: 300px;
-    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
-.gallery img:hover {
+.portfolio img:hover {
     transform: translateY(-10px);
 }
 
@@ -148,6 +144,20 @@ nav ul li a:hover {
 
 /* 📱 Адаптация для телефонов */
 @media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 200px;
+        height: 200px;
+    }
+
     .gallery img {
         width: 90%;
         max-width: 400px;
