@@ -14,7 +14,7 @@ body {
     text-align: center;
 }
 
-/* Контейнер для центрирования */
+/* Контейнер */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -59,7 +59,7 @@ nav ul li a:hover {
     color: #c4a484;
 }
 
-/* Анимация плавного появления */
+/* Анимация */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -100,7 +100,7 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-/* Контактный раздел */
+/* Контакты */
 .contact {
     background: #222;
     color: #fff;
@@ -109,7 +109,6 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* Контейнер для формы и контактов */
 .contact-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -118,7 +117,6 @@ nav ul li a:hover {
     gap: 30px;
 }
 
-/* Контактная форма */
 .contact-form {
     background: #fff;
     padding: 20px;
@@ -135,12 +133,6 @@ form {
     gap: 10px;
 }
 
-form label {
-    font-weight: bold;
-    color: #222;
-    text-align: left;
-}
-
 form input, form textarea {
     width: 100%;
     padding: 10px;
@@ -149,7 +141,7 @@ form input, form textarea {
     font-size: 16px;
 }
 
-/* Кнопка отправки */
+/* Кнопка */
 form button {
     background: #c4a484;
     color: white;
@@ -165,39 +157,11 @@ form button:hover {
     background: #a37650;
 }
 
-/* Контактная информация */
-.contact-info {
-    font-size: 18px;
-    text-align: left;
-    max-width: 300px;
-}
-
-.contact-info p {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.contact-info a {
-    color: #c4a484;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
 /* 📱 Адаптация для телефонов */
 @media (max-width: 768px) {
     .contact-wrapper {
         flex-direction: column;
         align-items: center;
-    }
-
-    .contact-info {
-        text-align: center;
     }
 
     .portfolio img {
@@ -207,15 +171,5 @@ form button:hover {
 
     header {
         font-size: 42px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        font-size: 32px;
-    }
-
-    .portfolio img {
-        width: 100%;
     }
 }
