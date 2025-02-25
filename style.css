@@ -41,6 +41,16 @@ nav ul li a {
 nav ul li a:hover {
     color: #c4a484;
 }
+/* Блок "Über mich" */
+.about {
+    max-width: 900px; /* Ограничиваем ширину */
+    margin: 0 auto; /* Центрируем блок */
+    text-align: center; /* Выравниваем текст по центру */
+    line-height: 1.8; /* Делаем текст более читаемым */
+    font-size: 18px; /* Немного увеличиваем размер шрифта */
+    padding: 40px 20px; /* Добавляем отступы */
+}
+
 
 /* Заголовок */
 header {
