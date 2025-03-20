@@ -71,4 +71,31 @@ img {
 .portfolio img {
     max-width: 50%; /* Изображения будут занимать не более половины экрана */
 }
+header {
+    text-align: center; /* Центрируем текст */
+    padding: 50px 0; /* Добавляем отступы сверху и снизу */
+}
+
+header h1 {
+    font-size: 3em; /* Увеличиваем заголовок */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5em; /* Увеличиваем текст */
+    color: #666; /* Делаем текст чуть светлее */
+}
+.gallery {
+    display: flex;
+    flex-direction: column; /* Выстраиваем фото в колонку */
+    align-items: center; /* Центрируем фото по горизонтали */
+    gap: 20px; /* Отступы между фото */
+}
+
+.gallery img {
+    max-width: 60%; /* Задаем размер фото */
+    height: auto; /* Пропорциональное масштабирование */
+    border-radius: 10px; /* Округляем углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем лёгкую тень */
+}
 
