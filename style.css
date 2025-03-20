@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* Основные стили */
+body {
+    font-family: 'Montserrat', sans-serif; /* Современный шрифт для основного текста */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Красивый стиль для имени */
+header h1 {
+    font-family: 'Playfair Display', serif; /* Элегантный шрифт */
+    font-size: 3.5em; /* Увеличенный размер */
+    font-weight: 700;
+    text-align: center;
+    color: #222; /* Глубокий тёмный цвет */
+}
+
+/* Слоган под именем */
+header p {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    color: #666; /* Чуть светлее */
+}
+
+/* Меню (делаем стильнее) */
+nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase; /* Делаем заглавные буквы */
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0073e6; /* При наведении цвет меняется */
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 /* Новый шрифт для всей страницы */
