@@ -111,4 +111,19 @@ header p {
     border-radius: 10px; /* Округляем углы */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем лёгкую тень */
 }
+.gallery {
+    display: flex; /* Размещаем фото в строку */
+    flex-wrap: nowrap; /* Запрещаем перенос на новую строку */
+    justify-content: center; /* Центрируем изображения */
+    gap: 20px; /* Отступы между фото */
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку, если не влезает */
+    padding: 10px;
+}
+
+.gallery img {
+    max-width: 30%; /* Размер каждого фото */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 10px; /* Округляем углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем лёгкую тень */
+}
 
