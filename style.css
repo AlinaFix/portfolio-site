@@ -174,4 +174,23 @@ header p {
     border-radius: 10px; /* Округляем углы */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем лёгкую тень */
 }
+.gallery {
+    display: flex; /* Размещаем фото в строку */
+    flex-wrap: wrap; /* Разрешаем перенос, если не помещаются */
+    justify-content: center; /* Центрируем */
+    gap: 20px; /* Добавляем отступы */
+    padding: 20px;
+}
+
+.gallery img {
+    max-width: 30%; /* Каждое фото занимает 30% ширины */
+    height: auto; /* Пропорциональное масштабирование */
+    border-radius: 10px; /* Округляем углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для фото */
+    transition: transform 0.3s ease-in-out; /* Красивый эффект */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* При наведении увеличивается */
+}
 
