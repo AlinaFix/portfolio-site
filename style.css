@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
 
-/* Основные стили */
+/* --- Основные стили --- */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -8,14 +8,14 @@ body {
     background-color: #f8f8f8;
 }
 
-/* --- 📌 Увеличиваем высоту навигационной панели --- */
+/* --- 📌 Меню (на компьютерах) --- */
 nav {
-    background-color: #333; /* Цвет фона */
-    height: 60px; /* Увеличиваем высоту */
+    background-color: #333;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px; /* Добавляем немного отступов слева и справа */
+    padding: 0 20px;
 }
 
 /* Навигационное меню */
@@ -24,7 +24,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 25px; /* Отступы между ссылками */
+    gap: 25px;
 }
 
 /* Ссылки в меню */
@@ -32,8 +32,8 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.1em; /* Чуть увеличиваем размер текста */
-    padding: 10px 15px; /* Увеличиваем отступы */
+    font-size: 1.1em;
+    padding: 10px 15px;
     transition: color 0.3s ease;
 }
 
@@ -42,22 +42,54 @@ nav ul li a:hover {
     color: #0073e6;
 }
 
-/* --- 📌 Адаптация на мобильных устройствах --- */
+/* --- 📌 Мобильное меню (бургер) --- */
+.menu-toggle {
+    display: none; /* Скрываем бургер на больших экранах */
+    font-size: 1.8em;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+/* Меню для мобильных */
 @media screen and (max-width: 768px) {
     nav {
-        height: 70px; /* Чуть выше на мобильных */
+        height: 70px;
+        justify-content: space-between;
+        padding: 0 15px;
     }
+    
+    .menu-toggle {
+        display: block; /* Показываем бургер */
+    }
+
     nav ul {
-        gap: 15px; /* Уменьшаем расстояние между пунктами меню */
+        display: none; /* Скрываем меню по умолчанию */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        text-align: center;
+        padding: 10px 0;
     }
+
+    nav ul.active {
+        display: flex; /* Показываем меню при активации */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
     nav ul li a {
-        font-size: 1em; /* Уменьшаем размер текста */
-        padding: 8px 10px;
+        font-size: 1em;
     }
 }
 
-
-/* Заголовок */
+/* --- 📌 Заголовок (адаптивный) --- */
 header {
     text-align: center;
     padding: 50px 0;
@@ -70,23 +102,20 @@ header h1 {
     color: #222;
 }
 
-header p {
-    font-size: 1.5em;
-    font-weight: 400;
-    color: #666;
+/* Заголовок под мобильные */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
 }
 
-/* --- Галерея (ФОТО В РЯД, ПО ЦЕНТРУ) --- */
+/* --- 📌 Галерея фото (адаптивная) --- */
 .gallery {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: center; /* ВЫРАВНИВАЕМ ПО ЦЕНТРУ */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
     padding: 10px;
-    white-space: nowrap;
-    width: 100%;
-    scrollbar-width: none; /* Скрываем стандартный скролл */
 }
 
 .gallery img {
@@ -95,7 +124,6 @@ header p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
-    object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -103,38 +131,34 @@ header p {
     transform: scale(1.05);
 }
 
-/* --- Для мобильных устройств (исправленный код) --- */
+/* Фото на мобильных */
 @media screen and (max-width: 768px) {
     .gallery img {
-        width: 250px; /* Чуть уменьшаем фото */
+        width: 90%; /* На телефонах фото шире */
     }
 }
 
-/* --- 📌 Контакты (с БОЛЬШИМ ПРОСТРАНСТВОМ сверху) --- */
+/* --- 📌 Контакты (адаптивные) --- */
 .contact {
-    background: #1e1e1e; /* Тёмный фон */
-    padding: 15px 0; /* Минимальные отступы ВНУТРИ блока */
+    background: #1e1e1e;
+    padding: 20px 0;
     width: 100%;
     text-align: center;
     color: #f1f1f1;
-    margin-top: 80px; /* УВЕЛИЧИВАЕМ ОТСТУП сверху! */
+    margin-top: 60px;
 }
 
-/* Контент внутри блока контактов */
 .contact .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Заголовок "Kontakt" */
 .contact h2 {
     font-size: 1.4em;
     margin-bottom: 5px;
-    color: #f1f1f1;
 }
 
-/* Контактные данные */
 .contact p {
     font-size: 1em;
     margin: 3px 0;
@@ -142,44 +166,20 @@ header p {
     align-items: center;
     justify-content: center;
     gap: 6px;
-    color: #f1f1f1;
 }
 
-/* Иконки */
 .contact i {
     font-size: 1.2em;
     color: #f1f1f1;
 }
 
-/* Ссылки */
-.contact a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #f1f1f1;
-    transition: color 0.3s ease;
-}
-
-.contact a:hover {
-    color: #c0c0c0;
-}
-
-/* --- 📌 Адаптация для мобильных устройств --- */
-@media screen and (max-width: 1024px) {
-    .contact {
-        margin-top: 60px; /* Чуть меньше на планшетах */
-    }
-    .contact .container {
-        max-width: 90%;
-    }
-}
-
+/* --- 📌 Адаптация для мобильных --- */
 @media screen and (max-width: 768px) {
     .contact {
-        margin-top: 50px; /* Ещё чуть меньше на телефонах */
+        margin-top: 50px;
         padding: 20px 0;
     }
     .contact .container {
         max-width: 95%;
     }
 }
-
