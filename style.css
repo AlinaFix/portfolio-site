@@ -92,6 +92,47 @@ header p {
     .gallery img {
         width: 250px; /* Чуть уменьшаем фото на маленьких экранах */
     }
+.contact {
+    background: #ffffff; /* Белый фон */
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    padding: 30px; /* Пространство внутри рамки */
+    max-width: 500px; /* Ограничиваем ширину */
+    margin: 50px auto; /* Центрируем */
+    text-align: center; /* Выравниваем текст */
 }
+
+/* Заголовок "Kontakt" */
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Иконки и ссылки */
+.contact p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Отступ между иконкой и текстом */
+}
+
+.contact i {
+    font-size: 1.5em;
+    color: #0073e6; /* Синий цвет иконок */
+}
+
+.contact a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0073e6;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #005bb5; /* При наведении цвет темнее */
+}
+
 
 
