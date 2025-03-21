@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alina Fix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Über mich</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Заголовок -->
+    <header>
+        <h1>Mein Portfolio</h1>
+        <p>Hier sind meine besten Arbeiten</p>
+    </header>
+
+    <!-- Фильтры категорий -->
+    <div class="portfolio-filters">
+        <button onclick="filterSelection('all')"> Alle</button>
+        <button onclick="filterSelection('landscape')"> Pейзажи</button>
+        <button onclick="filterSelection('portrait')"> Портреты</button>
+        <button onclick="filterSelection('product')"> Продукты</button>
+    </div>
+
+    <!-- Галерея работ -->
+    <div class="portfolio-gallery">
+        <div class="portfolio-item landscape">
+            <img src="images/landscape1.jpg" alt="Landscape 1">
+        </div>
+        <div class="portfolio-item landscape">
+            <img src="images/landscape2.jpg" alt="Landscape 2">
+        </div>
+        <div class="portfolio-item portrait">
+            <img src="images/portrait1.jpg" alt="Portrait 1">
+        </div>
+        <div class="portfolio-item portrait">
+            <img src="images/portrait2.jpg" alt="Portrait 2">
+        </div>
+        <div class="portfolio-item product">
+            <img src="images/product1.jpg" alt="Product 1">
+        </div>
+        <div class="portfolio-item product">
+            <img src="images/product2.jpg" alt="Product 2">
+        </div>
+    </div>
+
+    <!-- JavaScript для фильтрации -->
+    <script>
+        function filterSelection(category) {
+            let items = document.getElementsByClassName("portfolio-item");
+            if (category === "all") {
+                for (let i = 0; i < items.length; i++) {
+                    items[i].style.display = "block";
+                }
+            } else {
+                for (let i = 0; i < items.length; i++) {
+                    if (items[i].classList.contains(category)) {
+                        items[i].style.display = "block";
+                    } else {
+                        items[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
