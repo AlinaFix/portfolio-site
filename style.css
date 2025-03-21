@@ -80,49 +80,49 @@ header p {
     }
 }
 
-/* --- 📌 КОНТАКТЫ В РАМКЕ --- */
+/* --- 📌 КОНТАКТЫ В РАМКЕ (с красивым коричневым цветом) --- */
 .contact {
     background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    padding: 30px;
-    max-width: 450px;
-    margin: 50px auto;
+    border-radius: 12px; /* Чуть меньший радиус скругления */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    padding: 25px; /* Немного меньше отступ */
+    max-width: 400px; /* Делаем блок чуть уже */
+    margin: 40px auto; /* Центрируем */
     text-align: center;
-    border: 2px solid #0073e6;
+    border: 1px solid #8B4513; /* Красивый коричневый цвет */
 }
 
 /* Заголовок "Kontakt" */
 .contact h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #0073e6;
+    font-size: 1.8em;
+    margin-bottom: 12px;
+    color: #8B4513; /* Коричневый цвет заголовка */
 }
 
 /* Контактные данные */
 .contact p {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1.1em;
+    margin: 8px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 /* Иконки */
 .contact i {
-    font-size: 1.5em;
-    color: #0073e6;
+    font-size: 1.4em;
+    color: #8B4513; /* Коричневый цвет иконок */
 }
 
 /* Ссылки */
 .contact a {
     text-decoration: none;
     font-weight: bold;
-    color: #0073e6;
+    color: #8B4513;
     transition: color 0.3s ease;
 }
 
 .contact a:hover {
-    color: #005bb5;
+    color: #654321; /* Тёмный коричневый при наведении */
 }
