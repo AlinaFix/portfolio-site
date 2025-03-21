@@ -193,4 +193,23 @@ header p {
 .gallery img:hover {
     transform: scale(1.05); /* При наведении увеличивается */
 }
+.gallery {
+    display: flex; /* Размещаем фото в строку */
+    flex-wrap: nowrap; /* Запрещаем перенос на новую строку */
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку, если не влезает */
+    justify-content: flex-start; /* Выравниваем фото в ряд */
+    gap: 10px; /* Добавляем небольшие отступы */
+    padding: 10px;
+    white-space: nowrap; /* Запрещаем перенос фото */
+}
+
+/* Делаем фото удобного размера */
+.gallery img {
+    width: 250px; /* Фиксированная ширина фото */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 10px; /* Округляем углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+    flex-shrink: 0; /* Запрещаем сжатие фото */
+}
+
 
