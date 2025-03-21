@@ -92,23 +92,26 @@ header p {
     .gallery img {
         width: 250px; /* Чуть уменьшаем фото на маленьких экранах */
     }
+/* --- Стили блока "Контакты" (Исправленный код) --- */
 .contact {
     background: #ffffff; /* Белый фон */
     border-radius: 15px; /* Скругленные углы */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Лёгкая тень */
     padding: 30px; /* Пространство внутри рамки */
-    max-width: 500px; /* Ограничиваем ширину */
+    max-width: 450px; /* Ограничиваем ширину */
     margin: 50px auto; /* Центрируем */
     text-align: center; /* Выравниваем текст */
+    border: 2px solid #0073e6; /* Голубая рамка */
 }
 
 /* Заголовок "Kontakt" */
 .contact h2 {
     font-size: 2em;
     margin-bottom: 15px;
+    color: #0073e6;
 }
 
-/* Иконки и ссылки */
+/* Контактные данные */
 .contact p {
     font-size: 1.2em;
     margin: 10px 0;
@@ -118,11 +121,13 @@ header p {
     gap: 10px; /* Отступ между иконкой и текстом */
 }
 
+/* Иконки */
 .contact i {
     font-size: 1.5em;
-    color: #0073e6; /* Синий цвет иконок */
+    color: #0073e6; /* Цвет иконок */
 }
 
+/* Ссылки */
 .contact a {
     text-decoration: none;
     font-weight: bold;
@@ -131,8 +136,14 @@ header p {
 }
 
 .contact a:hover {
-    color: #005bb5; /* При наведении цвет темнее */
+    color: #005bb5; /* Цвет ссылки при наведении */
 }
 
+/* --- Для мобильных устройств --- */
+@media screen and (max-width: 768px) {
+    .gallery img {
+        width: 250px; /* Чуть уменьшаем фото на маленьких экранах */
+    }
+}
 
 
