@@ -319,4 +319,18 @@ header.hero {
 .home-preview img:hover {
   transform: scale(1.05);
 }
+/* --- Анимация появления --- */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in-out 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.hero p.fade-in {
+  animation-delay: 0.5s;
+}
 
