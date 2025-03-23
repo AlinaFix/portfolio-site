@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Über mich</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
+<nav>
+  <div class="menu-toggle">&#9776;</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">Über mich</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Kontakt</a></li>
+  </ul>
+</nav>
 
     <section class="about">
         <h2>Über mich</h2>
@@ -43,5 +44,11 @@
             📸 <strong>Möchtest du unvergessliche Momente festhalten?</strong> Lass uns gemeinsam deine Geschichte in Bildern erzählen! 
         </p>
     </section>
+    <script>
+  document.querySelector(".menu-toggle").addEventListener("click", function () {
+    document.querySelector("nav ul").classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>
