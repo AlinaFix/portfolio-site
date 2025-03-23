@@ -298,3 +298,24 @@ header.hero {
   font-weight: 300;
   color: #f5deb3;
 }
+/* --- Блок с превью фото на главной --- */
+.home-preview {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.home-preview img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.home-preview img:hover {
+  transform: scale(1.05);
+}
+
