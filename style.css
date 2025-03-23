@@ -336,4 +336,58 @@ header.hero {
 .hero p.fade-in {
   animation-delay: 0.5s;
 }
+.about {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2em;
+  color: #2a2a2a;
+}
+
+.about p.intro {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #1e1e1e;
+}
+
+.about p.closing {
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.about em {
+  color: #7a5c3d;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.about strong {
+  color: #3a2f2f;
+  font-weight: 600;
+}
+
+.about blockquote {
+  margin: 30px auto;
+  padding: 20px;
+  font-style: italic;
+  color: #555;
+  background: #f9f7f2;
+  border-left: 4px solid #c4aa84;
+  border-radius: 8px;
+  max-width: 600px;
+}
 
