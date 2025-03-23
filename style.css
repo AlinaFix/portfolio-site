@@ -385,14 +385,18 @@ header.hero {
   max-width: 600px;
 }
 .portfolio-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Расстояние между изображениями */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-.portfolio-item {
-  flex: 1 1 calc(33.333% - 20px); /* Три изображения в ряд */
-  max-width: calc(33.333% - 20px);
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Адаптация для мобильных устройств */
