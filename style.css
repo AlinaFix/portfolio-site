@@ -261,7 +261,7 @@ header h1 {
 }
 /* --- Градиентный фон --- */
 body.gradient-bg {
-background: linear-gradient(135deg, #fffaf0, #fbe3d0, #f5deb3);
+background: linear-gradient(135deg, #fffdf7, #fbecc0, #fae3ae);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   color: white;
