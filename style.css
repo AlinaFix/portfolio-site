@@ -141,61 +141,51 @@ header h1 {
 
 /* --- 📌 Контакты (адаптивные) --- */
 .contact {
-    background: #1e1e1e;
-    padding: 20px 0;
-    width: 100%;
-    text-align: center;
-    color: #f1f1f1;
-    margin-top: 60px;
+  background: #1e1e1e;
+  padding: 30px 0;
+  width: 100%;
+  text-align: center;
+  color: #f8f8f8;
+  margin-top: 60px;
 }
 
 .contact .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .contact h2 {
-    font-size: 1.4em;
-    margin-bottom: 5px;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #eaeaea;
 }
 
 .contact p {
-    font-size: 1em;
-    margin: 3px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+  font-size: 1.2em;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .contact i {
-    font-size: 1.2em;
-    color: #f1f1f1;
+  font-size: 1.3em;
+  color: #f5deb3;
 }
 
-/* --- 📌 Адаптация для мобильных --- */
-@media screen and (max-width: 768px) {
-    .contact {
-        margin-top: 50px;
-        padding: 20px 0;
-    }
-    .contact .container {
-        max-width: 95%;
-    }
-}
-/* --- 📌 Ссылки в блоке "Контакты" бежевого цвета --- */
 .contact a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #f5deb3; /* Бежевый цвет */
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  color: #f5deb3;
+  transition: color 0.3s ease;
 }
 
-/* При наведении - чуть темнее */
 .contact a:hover {
-    color: #e0c9a0; /* Светло-коричневый */
+  color: #e0c9a0;
 }
+
 
 /* Чтобы ссылки НЕ становились фиолетовыми после клика */
 .contact a:visited {
