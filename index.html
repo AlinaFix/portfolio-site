@@ -1,58 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alina Fix</title>
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alina Fix</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap">
 </head>
-<body>
+<body class="gradient-bg">
 
-    <!-- Навигация -->
-<nav>
-    <div class="menu-toggle">&#9776;</div> <!-- Бургер-меню -->
+  <!-- Навигация -->
+  <nav>
+    <div class="menu-toggle">&#9776;</div>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Über mich</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
     </ul>
-</nav>
+  </nav>
 
-    <!-- Заголовок -->
-    <header class="fade-in">
-        <h1>Alina Fix</h1>
-        <p>Fix The Memory</p>
-    </header>
-    
-    <!-- Портфолио -->
-    <section class="portfolio container fade-in">
-        <div class="gallery">
-            <img src="images/nature.JPG" alt="Naturfotografie">
-            <img src="images/nature1.JPG" alt="Porträt">
-            <img src="images/nature2.JPG" alt="Produktfotografie">
+  <!-- Заголовок -->
+  <header class="hero">
+    <h1 class="fade-in">Alina Fix</h1>
+    <p>Fix The Memory</p>
+  </header>
 
-        </div>
-    </section>
-    
-   
-
- <section class="contact">
-    <div class="container">
-        <h2>Kontakt</h2>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:alina_fix@dmx.de">alina_fix@dmx.de</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a href="tel:015110486204">015110486204</a></p>
-        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina" target="_blank">@yankovayaalina</a></p>
-    </div>
-</section>
-
-
+  <!-- JS: Бургер-меню -->
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+      document.querySelector("nav ul").classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
-<script>
-    document.querySelector(".menu-toggle").addEventListener("click", function() {
-        document.querySelector("nav ul").classList.toggle("active");
-    });
-</script>
