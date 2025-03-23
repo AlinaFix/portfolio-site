@@ -1,136 +1,126 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Alina Fix</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Alina Fix</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+  <!-- Навигация -->
   <nav>
-  <div class="menu-toggle">&#9776;</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">Über mich</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contact.html">Kontakt</a></li>
-  </ul>
-</nav>
+    <div class="menu-toggle">&#9776;</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
 
-    <!-- Заголовок -->
-    <header>
-       <header>
-  <h1>Mein Portfolio</h1>
-  <p>Jedes Bild erzählt eine Geschichte</p>
-</header>
+  <!-- Заголовок -->
+  <header>
+    <h1>Mein Portfolio</h1>
+    <p>Jedes Bild erzählt eine Geschichte</p>
+  </header>
 
-  font-size: 2.4em;
-  font-weight: 400;
-  font-family: 'Playfair Display', serif;
-  color: #2a2a2a;
-}
-> 
-        <p>Jedes Bild erzählt eine Geschichte</p>
-    </header>
+  <!-- Фильтры -->
+  <div class="portfolio-filters">
+    <button onclick="filterSelection('all')">Alle</button>
+    <button onclick="filterSelection('landscape')">Landschaften</button>
+    <button onclick="filterSelection('portrait')">Porträts</button>
+    <button onclick="filterSelection('product')">Produkte</button>
+  </div>
 
-    <!-- Фильтры категорий -->
-    <div class="portfolio-filters">
-        <button onclick="filterSelection('all')"> Alle</button>
-        <button onclick="filterSelection('landscape')"> Landschaften</button>
-        <button onclick="filterSelection('portrait')"> Porträts</button>
-        <button onclick="filterSelection('product')"> Produkte</button>
+  <!-- Галерея -->
+  <div class="portfolio-gallery">
+    <!-- --- Landscapes --- -->
+    <div class="portfolio-item landscape">
+      <img src="images/landscape1.JPG" alt="Landscape 1" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape2.JPG" alt="Landscape 2" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape3.JPG" alt="Landscape 3" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape4.JPG" alt="Landscape 4" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape5.JPG" alt="Landscape 5" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape6.JPG" alt="Landscape 6" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape7.JPG" alt="Landscape 7" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape8.JPG" alt="Landscape 8" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape9.JPG" alt="Landscape 9" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape10.JPG" alt="Landscape 10" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape11.JPG" alt="Landscape 11" />
+    </div>
+    <div class="portfolio-item landscape">
+      <img src="images/landscape12.JPG" alt="Landscape 12" />
     </div>
 
-    <!-- Галерея работ -->
-    <div class="portfolio-gallery">
-        <div class="portfolio-item landscape">
-            <img src="images/landscape1.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape2.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape3.JPG" alt="Landscape 1">
-        </div>
-         <div class="portfolio-item landscape">
-            <img src="images/landscape4.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape5.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape6.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape7.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape8.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape9.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape10.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-            <img src="images/landscape11.JPG" alt="Landscape 1">
-        </div>
-         <div class="portfolio-item landscape">
-            <img src="images/landscape12.JPG" alt="Landscape 1">
-        </div>
-        <div class="portfolio-item landscape">
-    
-      <div class="portfolio-item portrait">
-  <img src="images/portrait.jpg" alt="Portrait 1">
-</div>
-
-<div class="portfolio-item portrait">
-  <img src="images/portrait1.JPG" alt="Portrait 2">
-</div>
-
-<div class="portfolio-item portrait">
-  <img src="images/portrait2.jpg" alt="Portrait 3">
-</div>
-
-<div class="portfolio-item portrait">
-  <img src="images/portrait3.jpg" alt="Portrait 4">
-</div>
-
-        <div class="portfolio-item product">
-            <img src="images/product1.JPG" alt="Product 1">
-        </div>
-        <div class="portfolio-item product">
-            <img src="images/product2.JPG" alt="Product 2">
-        </div>
+    <!-- --- Portraits --- -->
+    <div class="portfolio-item portrait">
+      <img src="images/portrait.jpg" alt="Portrait 1" />
+    </div>
+    <div class="portfolio-item portrait">
+      <img src="images/portrait1.JPG" alt="Portrait 2" />
+    </div>
+    <div class="portfolio-item portrait">
+      <img src="images/portrait2.jpg" alt="Portrait 3" />
+    </div>
+    <div class="portfolio-item portrait">
+      <img src="images/portrait3.jpg" alt="Portrait 4" />
     </div>
 
-    <!-- JavaScript для фильтрации -->
-    <script>
-        function filterSelection(category) {
-            let items = document.getElementsByClassName("portfolio-item");
-            if (category === "all") {
-                for (let i = 0; i < items.length; i++) {
-                    items[i].style.display = "block";
-                }
-            } else {
-                for (let i = 0; i < items.length; i++) {
-                    if (items[i].classList.contains(category)) {
-                        items[i].style.display = "block";
-                    } else {
-                        items[i].style.display = "none";
-                    }
-                }
-            }
+    <!-- --- Products --- -->
+    <div class="portfolio-item product">
+      <img src="images/product1.JPG" alt="Product 1" />
+    </div>
+    <div class="portfolio-item product">
+      <img src="images/product2.JPG" alt="Product 2" />
+    </div>
+  </div>
+
+  <!-- Скрипт для фильтра -->
+  <script>
+    function filterSelection(category) {
+      const items = document.getElementsByClassName("portfolio-item");
+      if (category === "all") {
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.display = "block";
         }
-    </script>
-            <script>
-  document.querySelector(".menu-toggle").addEventListener("click", function () {
-    document.querySelector("nav ul").classList.toggle("active");
-  });
-</script>
+      } else {
+        for (let i = 0; i < items.length; i++) {
+          if (items[i].classList.contains(category)) {
+            items[i].style.display = "block";
+          } else {
+            items[i].style.display = "none";
+          }
+        }
+      }
+    }
+
+    // Mobile menu toggle
+    document.querySelector(".menu-toggle").addEventListener("click", function () {
+      document.querySelector("nav ul").classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>
