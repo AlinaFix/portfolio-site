@@ -253,7 +253,6 @@ header h1 {
     width: 100%;
   }
 }
-}
 /* --- Градиентный фон --- */
 body.gradient-bg {
   background-color: #f8f8f8;
@@ -399,5 +398,5 @@ header.hero {
 .portfolio-item img {
   width: 100%;
   height: auto;
-  object-fit: cover
-
+  object-fit: cover;
+}
