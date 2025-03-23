@@ -9,15 +9,16 @@
 </head>
 <body>
 
-    <!-- Навигация -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Über mich</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
+  <nav>
+  <div class="menu-toggle">&#9776;</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">Über mich</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contact.html">Kontakt</a></li>
+  </ul>
+</nav>
+
 
     <!-- Контактная информация -->
     <section class="contact container fade-in">
@@ -28,6 +29,12 @@
             <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/yankovayaalina" target="_blank">@yankovayaalina</a></p>
         </div>
     </section>
+    <script>
+  document.querySelector(".menu-toggle").addEventListener("click", function () {
+    document.querySelector("nav ul").classList.toggle("active");
+  });
+</script>
+
 
 </body>
 </html>
