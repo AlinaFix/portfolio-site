@@ -212,17 +212,17 @@ header h1 {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-/* --- 📱 Адаптация галереи для мобильных устройств --- */
+/* --- 📱 Для мобильных: делаем сетку 2 в ряд --- */
 @media screen and (max-width: 768px) {
   .portfolio-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 фото в ряд */
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     padding: 10px;
   }
 
   .portfolio-item {
-    width: 100%; /* Фото на всю ширину своей ячейки */
+    width: 100% !important;
     max-width: none;
   }
 }
