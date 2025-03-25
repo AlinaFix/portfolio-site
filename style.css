@@ -349,7 +349,7 @@ header.hero {
   letter-spacing: 0.5px;
 }
 
-/* --- Блок с превью фото на главной --- */
+/* 📌 Компьютеры — три изображения в строку, поменьше */
 .home-preview {
   display: flex;
   justify-content: center;
@@ -359,30 +359,16 @@ header.hero {
 }
 
 .home-preview img {
-  width: 280px;
+  width: 240px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
+  object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
 .home-preview img:hover {
   transform: scale(1.05);
-}
-/* Стили по умолчанию — для компьютеров */
-.home-preview {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
-}
-
-.home-preview img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
 }
 
 /* --- Анимация появления --- */
