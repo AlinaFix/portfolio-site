@@ -331,6 +331,22 @@ header.hero {
 .home-preview img:hover {
   transform: scale(1.05);
 }
+/* Стили по умолчанию — для компьютеров */
+.home-preview {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.home-preview img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 /* --- Анимация появления --- */
 .fade-in {
   opacity: 0;
