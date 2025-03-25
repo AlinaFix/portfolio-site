@@ -25,6 +25,8 @@ nav ul {
     margin: 0;
     display: flex;
     gap: 25px;
+    z-index: 9999;
+position: relative;
 }
 
 /* Ссылки в меню */
