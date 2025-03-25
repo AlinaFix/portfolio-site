@@ -529,13 +529,12 @@ header.hero {
       "a c";
     gap: 10px;
     padding: 10px;
-    justify-items: center; /* Центрирует внутри ячеек */
     align-items: center;
   }
 
   .home-preview img:nth-child(1) {
     grid-area: a;
-    width: 90%; /* чуть меньше для красивого вида */
+    width: 100%;
   }
 
   .home-preview img:nth-child(2) {
@@ -545,7 +544,7 @@ header.hero {
 
   .home-preview img:nth-child(3) {
     grid-area: c;
-    width: 90%;
+    width: 100%;
   }
 
   .home-preview img {
