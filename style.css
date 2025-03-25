@@ -452,4 +452,46 @@ header.hero {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+/* Общие стили (для компьютера) */
+.home-preview {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
+.home-preview img {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Стили для телефона */
+@media (max-width: 768px) {
+  .home-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c c";
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .home-preview img:nth-child(1) {
+    grid-area: a;
+  }
+
+  .home-preview img:nth-child(2) {
+    grid-area: b;
+  }
+
+  .home-preview img:nth-child(3) {
+    grid-area: c;
+  }
+
+  .home-preview img {
+    width: 100%;
+    height: auto;
+  }
+}
