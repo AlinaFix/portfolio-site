@@ -486,14 +486,30 @@ header.hero {
   .home-preview {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a a"
+      "b c";
     gap: 10px;
     padding: 10px;
   }
 
-  .home-preview img {
+  .home-preview img:nth-child(1) {
+    grid-area: a;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 10px;
+  }
+
+  .home-preview img:nth-child(2) {
+    grid-area: b;
+    width: 100%;
+  }
+
+  .home-preview img:nth-child(3) {
+    grid-area: c;
+    width: 100%;
+  }
+
+  .home-preview img {
+    height: auto;
+    border-radius: 12px;
   }
 }
