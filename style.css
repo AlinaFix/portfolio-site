@@ -414,3 +414,21 @@ header.hero {
   height: auto;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .portfolio-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .portfolio-item {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .portfolio-item img {
+    width: 100%;
+    height: auto;
+  }
+}
